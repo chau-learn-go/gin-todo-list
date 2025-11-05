@@ -6,10 +6,19 @@ type JobManagement struct {
 	jobs map[string]*Job
 }
 
-func NewJobManagement() *JobManagement {
+var jobManagement *JobManagement
+
+func newJobManagement() *JobManagement {
 	return &JobManagement{
 		jobs: make(map[string]*Job),
 	}
+}
+
+func GetJobManagementInstance() *JobManagement {
+	if jobManagement == nil {
+		jobManagement = newJobManagement()
+	}
+	return jobManagement
 }
 
 func (j *JobManagement) Add(job *Job) error {
@@ -31,6 +40,9 @@ func (j *JobManagement) GetAll() []*Job {
 	var jobs []*Job
 	for _, job := range j.jobs {
 		jobs = append(jobs, job)
+	}
+	if len(jobs) == 0 {
+		return []*Job{}
 	}
 	return jobs
 }
