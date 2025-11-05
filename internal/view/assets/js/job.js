@@ -37,17 +37,20 @@ async function displayJob() {
 
         if (job.status !== "doing" && job.status !== "done") {
             const btnDoing = document.createElement("button")
+            btnDoing.classList.add("doing")
             btnDoing.textContent = "Doing"
             cellActions.appendChild(btnDoing)
         }
 
         if (job.status !== "done") {
             const btnDone = document.createElement("button")
+            btnDone.classList.add("done")
             btnDone.textContent = "Done"
             cellActions.appendChild(btnDone)
         }
 
         const btnDelete = document.createElement("button")
+        btnDelete.classList.add("delete")
         btnDelete.textContent = "Delete"
         cellActions.appendChild(btnDelete)
     })
@@ -56,8 +59,8 @@ async function displayJob() {
     app.append(table)
 }
 
-function start() {
-    displayJob()
+async function start() {
+    await displayJob()
 }
 
-start()
+await start()

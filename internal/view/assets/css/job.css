@@ -1,0 +1,185 @@
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+#app table {
+    width: 1000px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+
+#app thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#app thead tr th {
+    padding: 16px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#app tbody {
+    display: block;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#app thead,
+#app tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#app tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+}
+
+#app tbody tr:hover {
+    background: #f8f9fa;
+}
+
+#app tbody tr:last-child {
+    border-bottom: none;
+}
+
+#app tbody td {
+    padding: 14px 16px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Custom scrollbar */
+#app tbody::-webkit-scrollbar {
+    width: 8px;
+}
+
+#app tbody::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#app tbody::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+#app tbody::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Striped rows (optional) */
+#app tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+#app tbody tr:nth-child(even):hover {
+    background: #f0f0f0;
+}
+
+#app button {
+    padding: 10px 24px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    margin: 0 2px;
+}
+
+#app button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+#app button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+#app button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Button Doing - Blue/Purple */
+#app .doing {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+#app .doing:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+}
+
+/* Button Done - Green */
+#app .done {
+    padding: 8px 16px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+#app .done:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+}
+
+/* Button Delete - Red */
+#app .delete {
+    padding: 8px 16px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+
+#app .delete:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+}
+
+#app .delete:active,
+#app .done:active,
+#app .doing:active {
+    transform: translateY(0);
+}

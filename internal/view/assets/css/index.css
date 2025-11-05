@@ -1,0 +1,35 @@
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .welcome {
+    text-align: center;
+}
+
+#app .welcome h1 {
+    font-size: 5rem;
+}
+
+#app .welcome a {
+    text-decoration: none;
+    background: linear-gradient(#3a3aff, #6363ff);
+    color: white;
+    font-size: 2rem;
+    padding: 4px 8px;
+    box-shadow: 2px 2px 2px #3a3aff,
+                -2px -2px 2px #3a3aff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#app .welcome a:hover{
+    background: linear-gradient(#3333fa, #7171ff);
+}
+
+#app .welcome a:active {
+    box-shadow: none;
+}

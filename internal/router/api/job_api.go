@@ -9,6 +9,14 @@ import (
 
 var jobManagement = model.GetJobManagementInstance()
 
+func InitJob() {
+	_ = jobManagement.Add(&model.Job{Name: "job1", Status: model.JobToDo})
+	_ = jobManagement.Add(&model.Job{Name: "job2", Status: model.JobDoing})
+	_ = jobManagement.Add(&model.Job{Name: "job3", Status: model.JobToDo})
+	_ = jobManagement.Add(&model.Job{Name: "job4", Status: model.JobDoing})
+	_ = jobManagement.Add(&model.Job{Name: "job5", Status: model.JobToDo})
+}
+
 func GetJobList(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"items": jobManagement.GetAll()})
 }
