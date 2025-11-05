@@ -4,7 +4,7 @@ import "testing"
 
 func TestJobManagement(t *testing.T) {
 	// Test init job management
-	jobManagement := NewJobManagement()
+	jobManagement := newJobManagement()
 
 	// Test add new job
 	_ = jobManagement.Add(&Job{
